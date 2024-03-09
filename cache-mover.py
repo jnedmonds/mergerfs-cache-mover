@@ -24,9 +24,6 @@ TARGET_PERCENTAGE = float(config['Settings']['TARGET_PERCENTAGE'])
 MAX_WORKERS = int(config['Settings']['MAX_WORKERS'])
 MAX_LOG_SIZE_MB = int(config['Settings']['MAX_LOG_SIZE_MB'])
 BACKUP_COUNT = int(config['Settings']['BACKUP_COUNT'])
-USER = config['Settings']['USER']
-GROUP = config['Settings']['GROUP']
-CHMOD = config['Settings']['CHMOD']
 
 # Convert log size from MB to bytes
 MAX_LOG_SIZE_BYTES = MAX_LOG_SIZE_MB * 1024 * 1024
