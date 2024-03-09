@@ -133,6 +133,7 @@ def delete_empty_dirs(path):
         os.rmdir(path)
 
 def main():
+    logging.info(f"<---------------------------- Starting Mergerfs-Cache-Mover ---------------------------->")
     running, processes = is_script_running()
     if running:
         for process in processes:
@@ -154,6 +155,8 @@ def main():
     # Clean up any empty directories under the cache path
     for root_folder in [os.path.join(CACHE_PATH, d) for d in os.listdir(CACHE_PATH) if os.path.isdir(os.path.join(CACHE_PATH, d))]:
         delete_empty_dirs(root_folder)
-
+    
+    logging.info(f"<---------------------------- Finished Mergerfs-Cache-Mover ---------------------------->")
+    
 if __name__ == "__main__":
     main()
